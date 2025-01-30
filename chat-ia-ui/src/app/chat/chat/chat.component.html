@@ -1,0 +1,26 @@
+<mat-toolbar color="primary">
+    <span>🏆 Chat App</span>
+    <span class="spacer"></span>
+  </mat-toolbar>
+  
+  <div class="chat-container">
+    <!-- Zone Chat -->
+    <div class="chat-box">
+      <div class="message" *ngFor="let message of messages">
+        <div class="message-sender">{{ message.sender }}</div>
+        <div class="message-content">{{ message.text }}</div>
+        <div *ngIf="message.imageUrl">
+          <img [src]="message.imageUrl" alt="image" class="chat-image">
+        </div>
+      </div>
+    </div>
+  
+    <!-- Saisie Message -->
+    <div class="input-section">
+      <input matInput placeholder="Saisissez votre message" [(ngModel)]="newMessage" class="message-input">
+      <input type="file" (change)="onFileSelected($event)" class="file-input" multiple>
+      <button mat-raised-button color="accent" (click)="sendMessage()">Envoyer</button>
+    </div>
+  </div>
+
+  

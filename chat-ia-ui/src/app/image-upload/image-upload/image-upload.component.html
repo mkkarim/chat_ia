@@ -1,0 +1,21 @@
+<mat-card class="upload-card">
+    <mat-card-header>
+      <mat-card-title>Upload d'images</mat-card-title>
+      <mat-card-subtitle>Vous pouvez uploader jusqu'à 5 images</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="file-input">
+        <input type="file" multiple (change)="onFileSelected($event)" id="fileInput" hidden>
+        <label for="fileInput" mat-raised-button color="primary">
+          <mat-icon>attach_file</mat-icon>
+          Sélectionner des fichiers
+        </label>
+        <span *ngIf="selectedFiles">{{ selectedFiles.length }} fichier(s) sélectionné(s)</span>
+      </div>
+      <button mat-raised-button color="accent" (click)="uploadImages()" [disabled]="!selectedFiles">
+        <mat-icon>cloud_upload</mat-icon>
+        Upload
+      </button>
+      <mat-progress-bar *ngIf="uploadProgress !== null" mode="determinate" [value]="uploadProgress"></mat-progress-bar>
+    </mat-card-content>
+  </mat-card>

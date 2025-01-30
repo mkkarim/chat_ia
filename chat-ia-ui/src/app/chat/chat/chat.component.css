@@ -1,0 +1,85 @@
+/* Styles globaux */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+  }
+  
+  /* Barre de navigation */
+  mat-toolbar {
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+  }
+  .spacer {
+    flex: 1;
+  }
+  
+  /* Conteneur principal du chat */
+  .chat-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80vh;
+    margin: 20px;
+  }
+  
+  /* Zone de messages */
+  .chat-box {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 20px;
+  }
+  
+  .message {
+    margin-bottom: 10px;
+    padding: 10px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .message-sender {
+    font-weight: bold;
+  }
+  
+  .chat-image {
+    max-width: 100%;
+    max-height: 200px;
+    margin-top: 10px;
+  }
+  
+  /* Section de saisie */
+  .input-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .message-input {
+    width: 70%;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 4px;
+  }
+  
+  .file-input {
+    width: 20%;
+  }
+  
+  button {
+    width: 10%;
+  }
+  
+  /* Pied de page */
+  .footer {
+    text-align: center;
+    padding: 10px;
+    background: #3f51b5;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
